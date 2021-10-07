@@ -1,0 +1,1 @@
+const pincodeRegex = RegExp("^//d{6}$");
