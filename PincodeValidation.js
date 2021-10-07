@@ -1,9 +1,14 @@
 const pincodeRegex = RegExp('^\\d{6}$');
-try{
-    if(pincodeRegex.test("A400088"))
-        console.log("correct")
+function validatePincode(pincode)
+{
+    if(pincodeRegex.test(pincode))
+        console.log(pincode + " is Valid");
     else
-    throw new Error("incorrect pincode");
+        throw new Error(pincode + " is Invalid");
+}
+try{
+    validatePincode("A445656")
+    validatePincode("400088B")
 }
 catch(e){
    console.error(e)
